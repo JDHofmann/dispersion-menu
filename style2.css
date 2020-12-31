@@ -6,8 +6,8 @@ input {
   left: 200px;
   z-index: 10;
   margin: 0;
-  /* opacity: 0; */
-  background: #008080;
+  opacity: 0;
+  /* background: #008080; */
 }
 
 .box {
@@ -35,6 +35,12 @@ input:checked ~ .box {
 
 .four {
   z-index: 4;
+  background: #ffffff;
+}
+
+.four p::after {
+  content: "MENU";
+  color: #202020;
 }
 
 .three {
@@ -53,6 +59,10 @@ input:checked ~ .box {
   z-index: 1;
   transition: .9s;
   transition-timing-function: cubic-bezier(.9, 0.0, .9, 1.0);
+}
+
+input:checked ~ .four p::after {
+  content: "X"
 }
 
 input:checked ~ .three {
